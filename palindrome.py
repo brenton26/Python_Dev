@@ -20,6 +20,6 @@ def isPalindrome(s):
 
 s = input("Give sentence: ")
 if isPalindrome(s):
-  print("That shit WAS a palindrome.")
+  print("That WAS a palindrome.")
 else:
-  print("That shit was NOT a palindrome.")
+  print("That was NOT a palindrome.")
