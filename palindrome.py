@@ -1,5 +1,5 @@
 '''
-This program determines if a given sentence is a palindrome or not
+This program determines if a sentence is a palindrome or not
 '''
 def isPalindrome(s):
   
