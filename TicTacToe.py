@@ -1,3 +1,7 @@
+'''
+Tic Tac Toe game
+'''
+
 def print_board(board):
 
 	print("The board look like this: \n")
@@ -23,6 +27,7 @@ def print_board(board):
 		else: 
 			print()
 			
+
 def print_instruction():
 	print("Please use the following cell numbers to make your move")
 	print_board([2,3,4,5,6,7,8,9,10])
@@ -43,6 +48,7 @@ def get_input(turn):
 		except Exception as e:
 			print(user + " is not a valid move! Please try again.\n")
 		
+
 def check_win(board):
 	win_cond = ((1,2,3),(4,5,6),(7,8,9),(1,4,7),(2,5,8),(3,6,9),(1,5,9),(3,5,7))
 	for each in win_cond:
@@ -53,10 +59,12 @@ def check_win(board):
 			pass
 	return -1
 
+
 def quit_game(board,msg):
 	print_board(board)
 	print(msg)
 	quit()
+
 
 def main():
 	
