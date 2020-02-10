@@ -15,7 +15,7 @@ def order(request):
             topping2 = filled_form.cleaned_data['topping2']
             note = f"Thanks for ordering, bitch. Your {size} {topping1} and {topping2} pizza is on it's way"
             new_form = PizzaForm()
-            return render(request, 'pizza/order.html', {'pizzaform':new_form, 'note':note})
+            return render(request, 'pizza/order.html', {'pizzaform': new_form, 'note': note})
     else:
         form = PizzaForm()
-        return render(request, 'pizza/order.html', {'pizzaform':form})
+        return render(request, 'pizza/order.html', {'pizzaform': form})

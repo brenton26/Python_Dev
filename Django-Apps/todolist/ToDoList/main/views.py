@@ -50,11 +50,8 @@ def index(request, id):
             else:
                 print("invalid!")
 
-
     elif request.POST == 'GET':
-            pass
-
-
+        pass
 
     return render(request, 'main/list.html', {'ls':ls})
 
@@ -71,4 +68,4 @@ def create(request):
 
     else:
         form = CreateNewList()
-    return render(request, 'main/create.html', {'form':form})
+    return render(request, 'main/create.html', {'form': form})

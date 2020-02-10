@@ -8,5 +8,5 @@ class Size(models.Model):
         return self.title
 
 class Pizza(models.Model):
-    topping1 = 
+    topping1 = 'test'
 
