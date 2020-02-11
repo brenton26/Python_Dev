@@ -23,3 +23,4 @@ if isPalindrome(s):
     print("That WAS a palindrome.")
 else:
     print("That was NOT a palindrome.")
+    
