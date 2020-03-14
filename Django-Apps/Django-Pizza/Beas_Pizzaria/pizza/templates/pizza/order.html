@@ -2,9 +2,21 @@
 
 <h2>{{ note }}</h2>
 
-<form action='{% url 'order' %}' method='post'>
+<form action="{% url 'order' %}" method="POST">
     {% csrf_token %}
     {{ pizzaform }}
+    <input type="submit" value="Order Pizza">
+</form>
+
+<br><br>
+
+Want more than one pizza?
+
+<form action="{% url 'pizzas' %}" method="GET">
+    {{ multiple_form }}
+    <input type="submit" value="Get Pizzas">
+</form>
+
 
     {% comment %}
     This code can be replaced exactly with a django form
@@ -22,6 +34,3 @@
         <option value='Small'>Large</option>
     </select>
     {% endcomment %}
-
-    <input type='submit' value='Order Pizza'>
-</form>

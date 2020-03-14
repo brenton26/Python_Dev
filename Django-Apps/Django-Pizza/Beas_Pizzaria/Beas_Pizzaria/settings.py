@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# SuperUser name: brenton
+# SuperUser pw: ;'
 
 # Application definition
 
