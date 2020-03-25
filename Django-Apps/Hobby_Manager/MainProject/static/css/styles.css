@@ -206,6 +206,7 @@ img {
   margin: 0 auto;
 }
 
+.clear{clear:both;}
 
 /* ===========================================
   Navigation Bar styling  //  START
@@ -620,8 +621,94 @@ div #footyPic{
     background: var(--dark);
     color: white;
 }
-
 /* =====  Specific styling Footy Demo App // END =====*/
+/* ===========================================
+    Specific styling Travel App //  START
+=============================================*/
+.cover-travel {
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/travel_pic_2.jpg') right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+#weather-title {
+    font-size: 4em;
+    text-align: center;
+    color: #000;
+    font-weight: 300;
+}
+.main {
+    padding: 6em 0 0;
+    background: #F8BE6A;
+}
+.main-info {
+    width: 85%;
+    margin: 5em auto;
+    background: #283361;
+    padding: 2em;
+	border-radius: 5px;
+}
+.weather-grids {
+    float: left;
+    width: 33%;
+}
+.weather-grids.weather-mdl {
+    text-align: center;
+}
+.weather-grids:nth-child(3) {
+    text-align: right;
+}
+.weather-grids h3 {
+    font-size: 1.5em;
+    color: #fff;
+}
+.weather-grids h3.fri {
+    font-weight: 900;
+    color: #FE8870;
+	margin-top: 0.7em;
+}
+.weather-grids h2 {
+    font-size: 3em;
+    font-weight: 300;
+	color: #fff;
+}
+.weather-grids h4 {
+    font-size: 1em;
+    color: #fff;
+}
+.weather-bottom {
+    text-align: center;
+    margin-top: 2em;
+}
+.weather-bottom ul li {
+    display: inline-block;
+    padding: 1em 0;
+    float: left;
+    width: 24.8%;
+}
+.weather-bottom ul li.bg{
+    background: #5C3F6E;
+}
+.weather-bottom h4 {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 100;
+    margin-bottom: 1em;
+}
+figure.icons {
+    margin: 0.5em 0;
+}
+.weather-bottom h5 {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 600;
+}
+.weather-bottom h6 {
+    font-size: 1em;
+    color: #FE8870;
+    margin-top: 0.5em;
+}
+/* =====  Specific styling Travel Demo App // END =====*/
 
 
 /* ============= RESPONSIVE max-width: 991p =========== */

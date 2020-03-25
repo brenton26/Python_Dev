@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %} <!-- must load static files on every template, even though it extends another template -->
+
+{% block pagetop-css %} cover-travel {% endblock %}
+
+{% block page-title %}Travel App{% endblock %}
+{% block page-subtitle %} Plan all of your excursions here!! {% endblock %}
+{% block button1 %}<a href="{% url 'footy' %}" class="contact-btn">Travel Home</a>{% endblock %}
+{% block button2 %}<a href="{% url 'listJerseys' %}" class="contact-btn">Destinations</a>{% endblock %}
+{% block button3 %}<a href="{% url 'weather' %}" class="contact-btn">Weather</a>{% endblock %}
+{% block button4 %}<a href="{% url 'MLSNews' %}" class="contact-btn">Travel News</a>{% endblock %}
+
+{% block appcontent %}
+    {% block templatecontent %}{% endblock %} <!-- section that all the template specific content will render within -->
+{% endblock %}

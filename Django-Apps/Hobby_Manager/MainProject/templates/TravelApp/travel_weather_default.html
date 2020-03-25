@@ -1,0 +1,61 @@
+{% extends 'TravelApp/travel_base.html' %}
+{% load staticfiles %}
+{% load mathfilters %}
+{% block templatecontent %}
+<section>
+    <div class="main">
+		<p id="weather-title">{{ city }}, {{ state }}</p>
+        <div class="main-info">
+            <div class="weather-top">
+                <div class="weather-grids">
+                    <h3 class="fri"> Current </h3>
+                    <h3>Weather</h3>
+                </div>
+                <div class="weather-grids weather-mdl">
+                    <img src="{% static 'images/weather-icons/' %}{{ weather.icon }}.png" height="100" width="100">
+                </div>
+                <div class="weather-grids">
+                    <h4>{{ weather.summary }}</h4>
+                    <h2>{{ weather.temperature|floatformat }}°</h2>
+                    <h4>Feels Like  {{ weather.apparentTemperature|floatformat }}°</h4>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="weather-bottom">
+                <ul>
+                    <li class="bg"><h4>HUMIDITY</h4>
+                        <h5>{{ weather.humidity|mul:"100"|floatformat }}</h5>
+                        <h6>%</h6>
+                    </li>
+                    <li><h4>VISIBILITY</h4>
+                        <h5>{{ weather.windSpeed|floatformat }}</h5>
+                        <h6>Miles</h6>
+                    </li>
+                    <li class="bg"><h4>WIND</h4>
+                        <h5>{{ weather.windSpeed|floatformat }}</h5>
+                        <h6>mph</h6>
+                    </li>
+                    <li><h4>CLOUD COVER</h4>
+                        <h5>{{ weather.cloudCover|mul:"100"|floatformat }}</h5>
+                        <h6>%</h6>
+                    </li>
+                </ul>
+                <div class="clear"> </div>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <form method="post">
+                {% csrf_token %}
+
+                <button class="primary-bright-button" type="submit"> Add to Collection </button>
+            </form>
+            <hr />
+            <button class="primary-bright-button" type="button" onclick=" location.href='{% url 'listJerseys' %}'">Back to Collection</button>
+        </div>
+
+
+        <br/>
+    </div>
+</section>
+{% endblock %}
