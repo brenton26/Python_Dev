@@ -1,0 +1,128 @@
+/* ===========================================
+    Specific styling Footy Demo App //  START
+=============================================*/
+.cover-footy {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('images/footy-main.jpg') right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+  }
+  .footy button{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 10px 20px;
+      border: 1px solid var(--dark);
+      background: transparent;
+      color: var(--dark);
+      text-decoration: none;
+      transition: 0.3s;
+  }
+  .footy button:hover {
+    background: var(--dark);
+    color: white;
+  }
+  
+  .footy table{
+      width: 75%;
+      align: center;
+      margin: 20px auto;
+      border: 40px 20px 10px 20px;
+  }
+  
+  .footy hr{
+      color: var(--lightGray);
+      border-top-width: 2px;
+      margin: 2px;
+  }
+  
+  .footy h4{
+      color: var(--midtone);
+      text-align: center;
+      text-shadow: 2px 2px var(--standout);
+  }
+  
+  .footy select, label{
+      color: white;
+      background: var(--dark);
+      display: flex;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+  
+  div #footyPic{
+      text-align: center;
+      position: relative;
+      padding:0;
+  }
+  
+  #footyPic span{
+      width: 100%;
+  }
+  .footy_top {
+   background:transparent!important;
+      display:inline-block;
+      padding:2px 3px;
+      position:relative;
+      top: -230px;
+      width:100%;
+      color: var(--neutral);
+      text-shadow: 2px 2px 5px var(--dark);
+  }
+  
+  .footy_center{
+      display:inline-block;
+      padding:2px 3px;
+      color: var(--dark);
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      text-align: center;
+      line-height:1.5em;
+  }
+  .footy_caption{
+      background:var(--contrast);
+      color:var(--lightGray)
+      text-decoration:none;
+      padding:4px 6px;
+      font-family: Montserrat Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
+      font-size:18px;
+      font-weight:bold;
+      line-height:1.2;
+      display:inline-block;
+      position: absolute;
+      right: 25%;
+  }
+  
+  #jerseyCollectionPage {
+      padding: 40px;
+  }
+  
+  #jerseyCollectionPage table th
+   {
+      background:var(--dark);
+      color: white;
+      text-align:center;
+      font-size: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+  }
+  
+  #jerseyCollectionPage table td
+   {
+       background:var(--dark);
+       color: white;
+       text-align:center;
+       font-size: 18px;
+  }
+  
+  #info-button {
+      background: white;
+      color: var(--dark);
+  
+  }
+  #info-button:hover {
+      background: var(--dark);
+      color: white;
+  }
+  /* =====  Specific styling Footy Demo App // END =====*/

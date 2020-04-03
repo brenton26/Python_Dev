@@ -1,0 +1,117 @@
+{% extends 'EdsApp/eds_base.html' %}
+{% load staticfiles %}
+{% block title %} Ed's Weather App {% endblock %}
+{% block home-button %}{% url 'eds_home' %}{%endblock %}
+{% block pagetop-css %}cover-weather{% endblock%}
+{% block removable-pagetop %}{% endblock %}
+                               
+{% block templatecontent %}
+<section>
+    <div class="main">
+		<p id="weather-title">{{ city }}, {{ state }}</p>
+        <div class="main-info">
+            <div class="weather-top">
+                <div class="weather-grids">
+                    <h3 class="fri"> Current </h3>
+                    <h3>Weather</h3>
+                </div>
+                <div class="weather-grids weather-mdl">
+                    <img src="{% static 'EdsApp/weather-icons/' %}{{ weather.icon }}.png" height="100" width="100">
+                </div>
+                <div class="weather-grids">
+                    <h4>{{ weather.summary }}</h4>
+                    <h2>{{ weather.temperature|floatformat }}°</h2>
+                    <h4>Feels Like  {{ weather.apparentTemperature|floatformat }}°</h4>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="weather-bottom">
+                <ul>
+                    <li class="bg"><h4>HUMIDITY</h4>
+                        <h5>{{ weather.humidity|floatformat }}</h5>
+                        <h6>%</h6>
+                    </li>
+                    <li><h4>VISIBILITY</h4>
+                        <h5>{{ weather.visibility|floatformat }}</h5>
+                        <h6>Miles</h6>
+                    </li>
+                    <li class="bg"><h4>WIND</h4>
+                        <h5>{{ weather.windSpeed|floatformat }}</h5>
+                        <h6>mph</h6>
+                    </li>
+                    <li><h4>CLOUD COVER</h4>
+                        <h5>{{ weather.cloudCover|floatformat }}</h5>
+                        <h6>%</h6>
+                    </li>
+                </ul>
+                <div class="clear"> </div>
+            </div>
+        </div>
+
+        <div class="main-info">
+            <div class="weather-top">
+                <div class="weather-grids wg2">
+                    <h3 class="fri"> Weekly </h3>
+                    <h3>Forecast</h3>
+                </div>
+                <div class="weather-grids wg2">
+                    <h4>{{ weather.week_summary }}</h4>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="weather-bottom wb2">
+                <ul>
+                    <li class="bg"><h4>{{ weather.day0_day_of_week }}</h4>
+                        <img src="{% static 'EdsApp/weather-icons/' %}{{ weather.day0_icon }}.png" height="42" width="42">
+                        <h5>{{ weather.day0_high_temp|floatformat }}°</h5>
+                        <h6>{{ weather.day0_low_temp|floatformat }}°</h6>
+                    </li>
+                    <li><h4>{{ weather.day1_day_of_week }}</h4>
+                        <img src="{% static 'EdsApp/weather-icons/' %}{{ weather.day1_icon }}.png" height="42" width="42">
+                        <h5>{{ weather.day1_high_temp|floatformat }}°</h5>
+                        <h6>{{ weather.day1_low_temp|floatformat }}°</h6>
+                    </li>
+                    <li class="bg"><h4>{{ weather.day2_day_of_week }}</h4>
+                        <img src="{% static 'EdsApp/weather-icons/' %}{{ weather.day2_icon }}.png" height="42" width="42">
+                        <h5>{{ weather.day2_high_temp|floatformat }}°</h5>
+                        <h6>{{ weather.day2_low_temp|floatformat }}°</h6>
+                    </li>
+                    <li><h4>{{ weather.day3_day_of_week }}</h4>
+                        <img src="{% static 'EdsApp/weather-icons/' %}{{ weather.day2_icon }}.png" height="42" width="42">
+                        <h5>{{ weather.day3_high_temp|floatformat }}°</h5>
+                        <h6>{{ weather.day3_low_temp|floatformat }}°</h6>
+                    </li>
+                    <li class="bg"><h4>{{ weather.day4_day_of_week }}</h4>
+                        <img src="{% static 'EdsApp/weather-icons/' %}{{ weather.day4_icon }}.png" height="42" width="42">
+                        <h5>{{ weather.day4_high_temp|floatformat }}°</h5>
+                        <h6>{{ weather.day4_low_temp|floatformat }}°</h6>
+                    </li>
+                    <li><h4>{{ weather.day5_day_of_week }}</h4>
+                        <img src="{% static 'EdsApp/weather-icons/' %}{{ weather.day5_icon }}.png" height="42" width="42">
+                        <h5>{{ weather.day5_high_temp|floatformat }}°</h5>
+                        <h6>{{ weather.day5_low_temp|floatformat }}°</h6>
+                    </li>
+                    <li class="bg"><h4>{{ weather.day6_day_of_week }}</h4>
+                        <img src="{% static 'EdsApp/weather-icons/' %}{{ weather.day6_icon }}.png" height="42" width="42">
+                        <h5>{{ weather.day6_high_temp|floatformat }}°</h5>
+                        <h6>{{ weather.day6_low_temp|floatformat }}°</h6>
+                    </li>
+                </ul>
+                <div class="clear"> </div>
+            </div>
+        </div>
+
+        <div class="search-box">
+            <form method="POST">
+                {% csrf_token %}
+                <h3>Search for another location:</h3>
+                <input type="text" id="loc-search" name="weather-search-string" placeholder="e.g. Louisville, KY">
+                <button class="weather-btn" type="submit"> Search </button>
+            </form>
+        </div>
+
+
+        <br/>
+    </div>
+</section>
+{% endblock %}

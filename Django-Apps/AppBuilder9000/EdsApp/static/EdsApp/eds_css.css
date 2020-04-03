@@ -1,0 +1,165 @@
+/* ===========================================
+Specific styling Ed's App //  START
+=============================================*/
+.cover-eds-home {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('images/cover_home.jpg') right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+.cover-weather {
+    background:url('images/cover-weather.jpg') right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vh;
+}
+#weather-title {
+    font-size: 3.5em;
+    text-align: center;
+    color: #283361;
+    font-weight: 1000;
+    margin-bottom: 1em;
+}
+.main {
+    padding: 6em 0 0;
+    background: #F8BE6A;
+}
+.weather-container {
+    padding: 4em 4em 2em 4em;
+}
+.main-info {
+    width: 85%;
+    margin: 7.5vw;
+    margin-bottom: 4em;
+    background: #283361;
+    padding: 2em;
+    border-top: 5px solid #C75D74;
+    border-bottom: 5px solid #C75D74;
+}
+.weather-grids {
+    float: left;
+    width: 33%;
+}
+.weather-grids.weather-mdl {
+    text-align: center;
+}
+.weather-grids:nth-child(3) {
+    text-align: right;
+}
+.weather-grids h3 {
+    font-size: 1.5em;
+    color: #fff;
+}
+.weather-grids h3.fri {
+    font-weight: 900;
+    color: #FE8870;
+    margin-top: 0.7em;
+}
+.weather-grids h2 {
+    font-size: 3em;
+    font-weight: 300;
+    color: #fff;
+}
+.weather-grids h4 {
+    font-size: 1em;
+    color: #fff;
+}
+.weather-bottom {
+    text-align: center;
+    margin-top: 2em;
+}
+.weather-bottom ul li {
+    display: inline-block;
+    padding: 1em 0;
+    float: left;
+    width: 24.8%;
+}
+.weather-bottom ul li.bg{
+    background: #5C3F6E;
+}
+.weather-bottom h4, weather-text {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 100;
+    margin-bottom: 1em;
+}
+figure.icons {
+    margin: 0.5em 0;
+}
+.weather-bottom h5 {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 600;
+}
+.weather-bottom h6 {
+    font-size: 1em;
+    color: #FE8870;
+    margin-top: 0.5em;
+}
+.weather-btn {
+    display: inline-block;
+    position: relative;
+    padding: 10px 20px;
+    border: 2px solid #C75D74;
+    background: transparent;
+    color: #C75D74;
+    font-size: 1.3em;
+    font-weight:500;
+    transition: 0.3s;
+    width: 150px;
+    margin: -75px;
+    left: 50%
+}
+.weather-btn:hover {
+    cursor: pointer;
+    font-weight: 700;
+    color: #FE8870;
+    background: #5C3F6E;
+}
+.wb2 ul li {
+    width: 14.1%;
+}
+.wg2 {
+    width: 50%;
+}
+.wg2 h4 {
+    float: right;
+    margin-top: 3em;
+}
+.search-box {
+    position: relative;
+    width: 400px;
+    height: 220px;
+    margin: -200px;
+    margin-top: 4em;
+    margin-bottom: 4em;
+    left: 50%;
+    background: #283361;
+    padding: 1em;
+    border-top: 5px solid #C75D74;
+    border-bottom: 5px solid #C75D74;
+}
+.search-box h3 {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #FE8870;
+    margin-bottom: 0.5em;
+}
+.search-box h6 {
+    font-size: 1em;
+    color: #Fff;
+    margin-bottom: 1em;
+}
+#loc-search {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 3em;
+    display: inline-block;
+    border: 2px solid #C75D74;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+/* =====  Specific styling Ed's App // END =====*/

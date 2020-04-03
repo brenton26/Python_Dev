@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load staticfiles %} <!-- must load static files on every template, even though it extends another template -->
+{% block title %} Ed's App {% endblock %}
+{% block tab-icon %} <link rel="icon" href="{% static 'images/png-icons/robot3.png' %}"> {% endblock %}
+{% block stylesheets %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'EdsApp/eds_css.css' %}">
+{% endblock %}
+
+{% block pagetop-css %} cover-eds-home {% endblock %}
+
+{% block page-title %}Ed's App{% endblock %}
+{% block page-subtitle %} Lots of really cool stuff in this here app {% endblock %}
+{% block button1 %}<a href="{% url 'eds_home' %}" class="contact-btn">Ed's Home</a>{% endblock %}
+{% block button2 %}<a href="{% url 'pets' %}" class="contact-btn">Create a Pet</a>{% endblock %}
+{% block button3 %}<a href="{% url 'weather' %}" class="contact-btn">Weather</a>{% endblock %}
+{% block button4 %}<a href="{% url 'api' %}" class="contact-btn">API</a>{% endblock %}
+
+{% block appcontent %}
+    {% block templatecontent %}{% endblock %} <!-- section that all the template specific content will render within -->
+{% endblock %}

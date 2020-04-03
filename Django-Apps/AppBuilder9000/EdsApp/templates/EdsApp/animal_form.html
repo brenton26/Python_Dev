@@ -1,0 +1,20 @@
+<h1>Animal Adoption Form</h1>
+<form method="post">
+    {% csrf_token %}
+    <table>
+    {% for field in form %}
+        <div>
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text|safe }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    </table>
+    
+    <br />
+    <button class="contact-btn" type="submit"> Adopt </button>
+    
+</form>
+<button class="contact-btn" type="button" onclick=" location.href='{% url 'pets' %}'">Back </button>

@@ -1,0 +1,8 @@
+<h1>Choose what kind of pet<h2>
+<form action="adopt/" method="post">
+    {% csrf_token %}
+
+    {{ form }} 
+
+    <button type="submit" value="test"> Select </button>
+</form>
